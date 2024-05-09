@@ -1,0 +1,1 @@
+from osu_renderer.renderer import StandardBeatmapRenderer

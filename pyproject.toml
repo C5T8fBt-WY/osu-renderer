@@ -1,0 +1,27 @@
+[build-system]
+requires = ["wheel", "setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osu_renderer"
+description = "Primitive and fast osu! beatmaps renderer"
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy",
+    "opencv_python",
+    "slider@git+https://github.com/C5T8fBt-WY/slider_fork",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "yapf",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.yapf]
+based_on_style = "pep8"
+column_limit = 100
